@@ -15,13 +15,13 @@ $ singularity build mongodb.sif docker://mongo:4.4.3
 ```
 
 ## クラスタ構成
-| 種類 | レプリカ名 | 台数 |
-----|----|---- 
-| config | configRepl | 3 |
-| mongod shard | shardRepl_1 | 3 |
-| mongod shard | shardRepl_2 | 3 |
-| mongod shard | shardRepl_3 | 3 |
-| mongos | - | 1 |
+| 種類 | レプリカ名 | 台数 | singularity instance |
+----|----|----|----
+| config | configRepl | 3 | mongoc001, mongoc002, mongoc003 |
+| mongod shard | shardRepl_1 | 3 | mongod001, mongod002, mongod003 |
+| mongod shard | shardRepl_2 | 3 | mongod004, mongod005, mongod006 |
+| mongod shard | shardRepl_3 | 3 | mongod007, mongod008, mongod009 |
+| mongos | - | 1 | mongos |
 
 ## singularity instanceの起動
 13個のシェルスクリプト start_*.sh を実行することでsingularity instanceが起動されます。
