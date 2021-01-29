@@ -25,12 +25,12 @@ $ singularity build mongodb.sif docker://mongo:4.4.3
 | mongod shard | shardRepl_3 | 3 | mongod007, mongod008, mongod009 |
 | mongos | - | 1 | mongos |
 
-- config: シャード情報の保存・管理を行う。3台のレプリカセット構成を取っている。
-- mongod shard: データを保存する。ここでは、1つのmongod shardはPRIMARY, SECONDARY, SECONDARYの3台のレプリカセット構成を取っている。
-- mongos: configサーバから情報を取得し、リクエストに対して適切なmongodへルーティングする。
+- config: シャード情報の保存・管理を行う。3台のレプリカセット構成を取っています。
+- mongod shard: データを保存する。ここでは、1つのmongod shardはPRIMARY, SECONDARY, SECONDARYの3台のレプリカセット構成を取っています。
+- mongos: configサーバから情報を取得し、リクエストに対して適切なmongodへルーティングします。
 
 ## singularity instanceの起動
-13個のシェルスクリプト start_*.sh を実行することでsingularity instanceが起動されます。
+13個のシェルスクリプト start_\*.sh を実行することでsingularity instanceが起動されます。
 
 singularity instance を複数のサーバで実行する場合、start_mongos.sh 実行前に mongos.conf 中の localhost を該当するサーバのIPアドレスに修正してください。
 
