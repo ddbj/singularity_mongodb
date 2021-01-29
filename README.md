@@ -7,7 +7,9 @@ https://christina04.hatenablog.com/entry/mongodb-4.2-cluster
 本リポジトリの設定ファイルは1台のPCで全singularity instanceを実行できるようにすべてのmongod, mongosに異なるポート番号を割り当てています。
 \*.conf, init_\*.js, init_\*.sh ファイル内のポート番号は環境に合わせて適宜変更してください。
 
-各singularity instance を複数のサーバで実行する場合、mongos.conf, init_*.js 内のlocalhostを各サーバのIPアドレスに変更してください。
+各singularity instance を複数のサーバで実行する場合、mongos.conf, init_\*.js 内のlocalhostを各サーバのIPアドレスに変更してください。
+
+本リポジトリの設定ファイルでは認証の設定を行っておりません。必要に応じて適宜設定を追加してください。
 
 ## singularity image の作成
 ```
